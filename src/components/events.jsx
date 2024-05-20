@@ -25,7 +25,7 @@ const UpdatedEvents=()=>{
             //   console.log(events)
             const new_data=[{
                 "pic":"./img/enthuzea_logo.jpg",
-                "name":"Enthuzea 2023",
+                "name":"Enthuzea 2024",
                 "title":"Summer Event",
                 "date":1684454400000,
                 "price":"Enthuzea is Awesome!",
@@ -39,7 +39,7 @@ const UpdatedEvents=()=>{
             console.log(err)
             const new_data=[{
                 "pic":"./img/enthuzea_logo.jpg",
-                "name":"Enthuzea 2023",
+                "name":"Enthuzea 2024",
                 "title":"Summer Event",
                 "date":1684454400000,
                 "price":"Enthuzea is Awesome!",
@@ -65,15 +65,18 @@ const UpdatedEvents=()=>{
     <br></br>
     <br></br>
     <br></br>
-        {events.map((value)=>(
+        {/* {events.map((value)=>(
             <NewCard img={value.pic} date={value.date}   counter="" title={value.name} quote={value.title} price={value.price}></NewCard>
-        ))}
-    <center><h3 className="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" style={{color: "white",opacity:"0.9",fontSize:"4em",paddingTop:isMobile?"15%":"4%",fontFamily:"verdana"}}  onMouseOver={()=>{setTheme("red")}} onMouseLeave={()=>{setTheme("black")}}>Enthuzea 2K23</h3></center>
+        ))} */}
+    <center><h3 className="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" style={{color: "white",opacity:"0.9",fontSize:"4em",paddingTop:isMobile?"15%":"4%",fontFamily:"verdana"}}  onMouseOver={()=>{setTheme("red")}} onMouseLeave={()=>{setTheme("black")}}>Enthuzea 2K24</h3></center>
       <Stack direction={['column', 'row']} spacing='40px'>
       <center>
-      <video controls style={{width:"45%",display:"inline",paddingTop:"2%"}}>
+      {/* <video controls style={{width:"45%",display:"inline",paddingTop:"2%"}}>
         <source src="img/enthuzea 2023/event2.mp4" type="video/mp4"></source>
-      </video>
+      </video> */}
+      <img style={{display:"block"}} src="img/ENTHUZEA 2024/poster2.jpg"></img>
+      <img style={{display:"inline"}} src="img/ENTHUZEA 2024/EVENT.jpg"></img>
+      <img style={{display:"inline"}} src="img/ENTHUZEA 2024/IMG1.jpg"></img>
       </center>
       </Stack>
     </div>

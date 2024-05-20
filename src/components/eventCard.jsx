@@ -67,7 +67,7 @@ const NewCard=({img,title,date,quote})=>{
     // }
     // else
     //  date=""
-    setCountdown("Event is Live!")
+    setCountdown(countdown)
 })
     return (
     <>

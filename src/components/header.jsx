@@ -63,7 +63,7 @@ const Header=({color})=>{
         // allEvents();
         const interval = setInterval(() => {
             // counter
-            var eventDate=new Date(1684454400000);
+            var eventDate=new Date(2024, 4, 24);
             var _second = 1000;
             var _minute = _second * 60;
             var _hour = _minute * 60;
@@ -188,8 +188,8 @@ const Header=({color})=>{
                                 <div className="buy_tkt">
                                     <div className="book_btn d-none d-lg-block" style={{display:isMobile?"none":""}}>
                     
-                                        {/* <a style={{fontSize:"120%"}} href="/">{countdown}</a> */}
-                                        <a style={{fontSize:"120%"}} href="/">We are Live!</a>
+                                        <a style={{fontSize:"120%"}} href="/">{countdown}</a>
+                                        {/* <a style={{fontSize:"120%"}} href="/">We are Live!</a> */}
                                     </div>
                                 </div>
                             </div>

@@ -83,7 +83,7 @@ const Home=()=>{
         const interval = setInterval(() => {
 
             // counter
-            var eventDate=new Date(1684454400000);
+            var eventDate=new Date(2024, 4, 24);
             var _second = 1000;
             var _minute = _second * 60;
             var _hour = _minute * 60;
@@ -103,6 +103,8 @@ const Home=()=>{
                 seconds=0+seconds.toString();
             const timer=days+":"+hours+":"+minutes+":"+ seconds
             setCountdown(timer)
+            if(countdown<=0)
+                setCountdown("We Are Live!")
           }, 1000);
           return () => clearInterval(interval);
     })
@@ -124,7 +126,7 @@ const Home=()=>{
                             <span className="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s" style={{fontSize:isMobile?"150%":"250%",fontFamily:"cursive",color:"white"}}>Swami Vivekananda Institute Of Science & Technology</span>
                             <br></br>
                             <span className="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s" style={{fontSize:isMobile?"150%":"250%",fontFamily:"cursive"}}>welcomes you to</span>
-                            <h3 className="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s" style={{paddingBottom:isMobile?"55px":"0px"}}>ENTHUZEA 2023</h3>
+                            <h3 className="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s" style={{paddingBottom:isMobile?"55px":"0px"}}>ENTHUZEA 2024</h3>
                             {/* <p className="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">SVIST, Gobindapur</p> */}
                         </div>
                     </div>
@@ -134,33 +136,35 @@ const Home=()=>{
             
     </div>
         
-            {/* <a style={{fontSize:"120%"}} href="/">{countdown}</a> */}
             <Center color='white' style={{backgroundColor:"black"}}>
-                <h1 style={{color:multipleColor,padding:"0px",paddingBottom:"2%",margin:"0px",fontWeight:"bold",fontSize:isMobile?"47px":"80px"}}>Enthuzea is Live!</h1>
+                <h1 style={{color:multipleColor,padding:"0px",paddingBottom:"2%",margin:"0px",fontWeight:"bold",fontSize:isMobile?"47px":"80px"}}>Live In </h1>
             </Center>
-           <Center> <Square  
-           style={{width:"100%",padding:"0px",margin:"0px",fontSize:"5em"}} size='100px' bg='black' color='white'>
+           <Center> 
+                <Square style={{width:"100%",padding:"0px",margin:"0px",fontSize:"5em"}} size='100px' bg='black' color='white'>
+                    <a style={{fontSize:"60%"}} href="/">{countdown}</a>
                 {/* {countdown} */}
-                DAY 2 
-            </Square>
+                {/* DAY 2  */}
+
+                </Square>
             </Center>
         <div style={{backgroundColor:"black"}}>
             <br></br>
             <br></br>
             <br></br>
             <center>
-                <Button 
+                <img style={{width:"70%",borderRadius:"10px"}} src="img/ENTHUZEA 2024/poster.jpg"></img>
+                {/* <Button 
                 colorScheme="teal"
                 variant={"solid"}
                 style={{color:"white"}} 
                 onClick={onButtonClick}>
                     Download Brochure
-                </Button>
+                </Button> */}
             </center>
         </div>
      {/* <div style={{backgroundColor:"black",paddingTop:"5%",margin:"0px"}}>
                 <center>
-                    <img src="img/enthu/1.png" style={{width:"40%"}}></img>
+                    <img src="img/enthu/1.png" styl e={{width:"40%"}}></img>
                 </center>
             </div>     */}
     <ProgramCard></ProgramCard>
