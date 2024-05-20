@@ -1,0 +1,129 @@
+.timer-container{
+    background-color: black;
+}
+.countdown-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+.card {
+    height: 60px;
+    background: hsl(236, 21%, 26%);
+    text-align: center;
+    font-size: 32px;
+    color: hsl(0, 89%, 51%);
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 8px 1px -4px hsl(234, 17%, 12%);
+    transform-style: preserve-3d;
+    perspective: 600px;
+    transition: transform .7s;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.display {
+    z-index: 1;
+}
+
+.front-display {
+    position: absolute;
+    height: 30px;
+    top: 0px;
+    width: 100%;
+    background: hsl(233, 21%, 23%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    backface-visibility: hidden;
+    transition: transform 2s;
+    animation: front-display 3s 1s infinite ease-in-out;
+}
+
+.back-display {
+    position: absolute;
+    height: 30px;
+    top: 30px;
+    width: 100%;
+}
+
+.display-heading {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: hsl(237, 18%, 59%);
+    letter-spacing: .2em;
+    
+}
+
+
+.icon-flex:nth-child(2),
+.icon-flex:nth-child(3) {
+    margin-left: 2em;
+}
+
+.fab {
+    color: hsl(237, 18%, 59%);
+    font-size: 20px;
+}
+
+.fab:hover {
+    color: hsl(0, 89%, 53%);
+    cursor: pointer;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+.attribution a {
+    color: hsl(0, 89%, 53%);
+}
+
+@media (min-width: 700px) {
+    .container {
+        min-height: 78vh;
+        
+        background-size: contain, 950px;
+    }
+
+
+    .countdown-container {
+        width: 40%;
+    
+    }
+
+    .card {
+        font-size: 50px;
+        height: 80px;
+    }
+
+    .display-heading {
+        font-size: 9px;
+        
+    }
+
+    .front-display {
+        height: 40px;
+    }
+
+    .social-icons {
+        margin-left: 45%;
+        bottom: 50px;
+    }
+
+    .attribution {
+        display: block;
+        margin-left: 30%;
+    }
+}
