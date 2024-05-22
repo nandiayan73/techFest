@@ -4,42 +4,27 @@ import Footer from "./footer";
 import Details from "./programDetails";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useRef } from "react";
 const Member = () => {
   const [events, setEvents] = useState([]);
-  // const allEvents=async()=>{
-  //     try{
-  //         const res = await axios.get(
-  //             'https://backend-jofn.onrender.com/api/user/allmembers',
-  //           )
-  //           console.log(res.message)
-  //           if(res.status===201)
-  //             setEvents(res.data)
-  //          else{
+  const videoRef=useRef(null);
+  const [isPlaying,setIsPlaying]=useState(false);
+  
+  const playVideo=()=>{
+    if(isPlaying==false)
+      {
+        setIsPlaying(true);
+        videoRef.current.play();
+      }
+    else
+      {
+        setIsPlaying(false);
+        videoRef.current.pause();
+      }
 
-  //             const new_data=[{
-  //                 pic:"https://miro.medium.com/v2/resize:fit:1400/1*-l1N7X9SzFGgid_WQrWphQ.png",
-  //                 name:"Hey",
-  //                 description:"No members added",
-  //                 about:"Current no members has been added!"
-  //                 },
-  //             ]
-  //             console.log(new_data)
-  //                 setEvents(new_data);
-  //          }
-  //     }
-  //     catch(err){
-  //         console.log(err)
-  //         const new_data=[{
-  //             "pic":"https://miro.medium.com/v2/resize:fit:1400/1*-l1N7X9SzFGgid_WQrWphQ.png",
-  //             "name":"Hey",
-  //             "description":"No members added",
-  //             "about":"Current no members has been added!"
-  //             },
-  //         ]
-  //         console.log(new_data)
-  //         setEvents(new_data);
-  //     }
-  // }
+  }
+ 
+
   return (
     <>
       <div style={{ backgroundColor: "black" }}>
@@ -578,7 +563,7 @@ const Member = () => {
                           data-wow-delay=".4s"
                           style={{ fontFamily: "Arial", fontWeight: "bold" }}
                         >
-                          2nd year, CSE (2021-2025)
+                          CSE 3rd year
                         </h4>
                       </div>
                       <div
@@ -586,7 +571,14 @@ const Member = () => {
                         data-wow-duration="1s"
                         data-wow-delay=".5s"
                       >
-                        <img src="img/enthu/ayan.jpg" alt=""></img>
+                      {/* <button className="control-button" onClick={playVideo} style={{display:isPlaying?"none":""}} >▶️</button> */}
+                      {/* <button className="control-button" onClick={pauseVideo} style={{display:isPlaying?"":"none"}}>⏸️</button> */}
+                      <video ref={videoRef} onClick={playVideo} width="640" height="360">
+                        <source src="img/developers/dev4.mp4" type="video/mp4" />
+                      </video>
+
+                        {/* <img src="img/enthu/ayan.jpg" alt=""></img> */}
+
                       </div>
                       <h4
                         className="wow fadeInUp"
@@ -598,6 +590,8 @@ const Member = () => {
                       </h4>
                     </div>
                   </div>
+
+
                   <div className="single_propram">
                     <div className="inner_wrap">
                       <div className="circle_img"></div>
@@ -608,7 +602,7 @@ const Member = () => {
                           data-wow-delay=".3s"
                           style={{ fontFamily: "Arial", fontWeight: "bold" }}
                         >
-                          Subhajeet Das
+                          Shubhayan Bagchi
                         </span>
                         <h4
                           className=" wow fadeInUp"
@@ -616,7 +610,7 @@ const Member = () => {
                           data-wow-delay=".4s"
                           style={{ fontFamily: "Arial", fontWeight: "bold" }}
                         >
-                          4th year, CSE (2019-2023)
+                          CSE 2nd year
                         </h4>
                       </div>
                       <div
@@ -624,7 +618,7 @@ const Member = () => {
                         data-wow-duration="1s"
                         data-wow-delay=".5s"
                       >
-                        <img src="img/enthu/subhajeet.jpg" alt=""></img>
+                        <img src="img/developers/dev 3.jpeg" alt=""></img>
                       </div>
                       <h4
                         className="wow fadeInUp"
@@ -636,6 +630,91 @@ const Member = () => {
                       </h4>
                     </div>
                   </div>
+
+
+                  <div className="single_propram">
+                    <div className="inner_wrap">
+                      <div className="circle_img"></div>
+                      <div className="porgram_top">
+                        <span
+                          className=" wow fadeInLeft"
+                          data-wow-duration="1s"
+                          data-wow-delay=".3s"
+                          style={{ fontFamily: "Arial", fontWeight: "bold" }}
+                        >
+                          Sarnick Chakraborty
+                        </span>
+                        <h4
+                          className=" wow fadeInUp"
+                          data-wow-duration="1s"
+                          data-wow-delay=".4s"
+                          style={{ fontFamily: "Arial", fontWeight: "bold" }}
+                        >
+                          CSE 2nd year
+                        </h4>
+                      </div>
+                      <div
+                        className="thumb wow fadeInUp"
+                        data-wow-duration="1s"
+                        data-wow-delay=".5s"
+                      >
+                        <img src="img/developers/dev 2.jpeg" alt=""></img>
+                      </div>
+                      <h4
+                        className="wow fadeInUp"
+                        data-wow-duration="1s"
+                        data-wow-delay=".6s"
+                        style={{ fontFamily: "Arial", fontWeight: "bold" }}
+                      >
+                        Web Developer
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div className="single_propram">
+                    <div className="inner_wrap">
+                      <div className="circle_img"></div>
+                      <div className="porgram_top">
+                        <span
+                          className=" wow fadeInLeft"
+                          data-wow-duration="1s"
+                          data-wow-delay=".3s"
+                          style={{ fontFamily: "Arial", fontWeight: "bold" }}
+                        >
+                          Subhakash Paul
+                        </span>
+                        <h4
+                          className=" wow fadeInUp"
+                          data-wow-duration="1s"
+                          data-wow-delay=".4s"
+                          style={{ fontFamily: "Arial", fontWeight: "bold" }}
+                        >
+                          CSE 2nd year
+                        </h4>
+                      </div>
+                      <div
+                        className="thumb wow fadeInUp"
+                        data-wow-duration="1s"
+                        data-wow-delay=".5s"
+                      >
+                        <img src="img/developers/dev 1.jpg" alt=""></img>
+                      </div>
+                      <h4
+                        className="wow fadeInUp"
+                        data-wow-duration="1s"
+                        data-wow-delay=".6s"
+                        style={{ fontFamily: "Arial", fontWeight: "bold" }}
+                      >
+                        Web Developer
+                      </h4>
+                    </div>
+                  </div>
+
+
+
+
+
+
                 </div>
               </div>
             </div>
