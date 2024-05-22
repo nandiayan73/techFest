@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import axios from "axios";
 import {
   Drawer,
   DrawerBody,
@@ -74,7 +73,7 @@ const Header = ({ color }) => {
             backgroundColor: colorChange ? "black" : color,
             backgroundAttachment: "fixed",
             position: "fixed",
-            height: isMobile ? "15%" : "",
+            height: isMobile ? "15%" : "20%",
           }}
           className="header-area "
         >

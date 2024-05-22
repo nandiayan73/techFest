@@ -17,7 +17,7 @@ const TourCard = ({ img, text }) => {
   const [color, setColor] = useState("black");
 
   return (
-    <div>
+    <div style={{marginBottom:"5px"}}>
       <Card
         maxW="sm"
         style={{ backgroundColor: theme }}

@@ -38,18 +38,25 @@ const Timer = ({ selectedDateTime }) => {
     <div className="timer-container" >
       <div className="countdown-container">
         <div className="countdown countdown-days">
-          <div className="card">
-            <div data-days className="display days" >
+        {/* days */}
+
+          <div className="card" style={{width:"100%"}}>
+            <div data-days className="display days" style={{fontSize:isMobile?"100%":"100%"}}>
               {countdown && formatTime(countdown.days)}
             </div>
             <div className="front-display"></div>
             <div className="back-display"></div>
           </div>
+
+
           <div className="display-heading">Days</div>
         </div>
+
+
+        {/* hours */}
         <div className="countdown countdown-hours">
-          <div className="card">
-            <div data-hours className="display hours">
+          <div className="card" style={{width:"100%"}}>
+            <div data-hours className="display hours" style={{fontSize:isMobile?"100%":"100%"}}>
               {countdown && formatTime(countdown.hours)}
             </div>
             <div className="front-display"></div>
@@ -57,9 +64,10 @@ const Timer = ({ selectedDateTime }) => {
           </div>
           <div className="display-heading">Hours</div>
         </div>
+        {/* minutes */}
         <div className="countdown countdown-minutes">
-          <div className="card">
-            <div data-minutes className="display minutes">
+          <div className="card" style={{width:"100%"}}>
+            <div data-minutes className="display minutes" style={{fontSize:isMobile?"100%":"100%"}}>
               {countdown && formatTime(countdown.minutes)}
             </div>
             <div className="front-display"></div>
@@ -67,9 +75,11 @@ const Timer = ({ selectedDateTime }) => {
           </div>
           <div className="display-heading">Minutes</div>
         </div>
+
+        {/* seconds */}
         <div className="countdown countdown-seconds">
-          <div className="card">
-            <div data-seconds className="display seconds">
+          <div className="card" style={{width:"100%"}}>
+            <div data-seconds className="display seconds" style={{fontSize:isMobile?"100%":"100%"}} >
               {countdown && formatTime(countdown.seconds)}
             </div>
             <div className="front-display"></div>

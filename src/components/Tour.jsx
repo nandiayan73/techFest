@@ -6,11 +6,11 @@
   import { useState } from 'react'
 //   import Modal from 'react-bootstrap/Modal';
 const Tour=()=>{
- const [theme,setTheme]=useState("black");
+ const [theme,setTheme]=useState("white");
  const [isMobile] = useMediaQuery("(max-width: 768px)") 
   
     return (
-      <div style={{overflowX:"hidden"}}>
+      <div style={{overflowX:"hidden",backgroundColor:"black"}}>
         <Header color="black"></Header>
         <br></br>
         <br></br>

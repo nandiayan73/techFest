@@ -118,15 +118,15 @@ const Home = () => {
             paddingBottom: "2%",
             margin: "0px",
             fontWeight: "bold",
-            fontSize: isMobile ? "47px" : "80px",
+            fontSize: isMobile ? "40px" : "80px",
           }}
         >
-          We Are Back
+          Countdown Begins
         </h1>
       </Center>
 
           {}
-      {/* <Timer selectedDateTime={new Date(2024, 4, 24)} />{" "} */}
+      <Timer selectedDateTime={new Date(2024, 4, 24)} />{" "}
       {/* Render Timer component */}
       <div style={{ backgroundColor: "black" }}>
         <br></br>
@@ -134,7 +134,7 @@ const Home = () => {
         <br></br>
         <center>
           <img
-            style={{ width: "80%", borderRadius: "10px", height:"800px" }}
+            style={{ width: "100%", borderRadius: "10px", height:"50%" }}
             src="img/ENTHUZEA 2024/poster.jpg"
           ></img>
         </center>
