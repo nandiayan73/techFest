@@ -38,7 +38,13 @@ const Details=()=>{
                         data-wow-duration="1s"
                         data-wow-delay=".5s"
                       >
-                        <img src="img/assets/lokoexpress.jpg" alt=""></img>
+                        <video controls  loop>
+                          <source
+                            src="img/assets/loko.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
                         {/* <video controls>
                                         <source src="img/enthu/event1.mp4" type="video/mp4"></source>
                                     </video>   */}
@@ -92,13 +98,13 @@ const Details=()=>{
                         data-wow-duration="1s"
                         data-wow-delay=".5s"
                       >
-                        <img
-                          src="img/assets/ananyaxbohemianbaul.jpg"
-                          alt=""
-                        ></img>
-                        {/* <video controls>
-                                        <source src="img/enthu/event2.mp4" type="video/mp4"></source>
-                                    </video>   */}
+                        <video controls loop>
+                          <source
+                            src="img/assets/ananya.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
                       </div>
                       <h4
                         className="wow fadeInUp"

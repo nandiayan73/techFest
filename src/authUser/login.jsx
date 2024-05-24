@@ -25,7 +25,7 @@ const App=()=>
           const host=import.meta.env.VITE_HOST;
           
           // console.log(host)
-             axios.get(host+'/register', { withCredentials: true })
+             axios.get(host+'https://fest-backend-wr4i.onrender.com/register', { withCredentials: true })
             .then(response => {
                 console.log(response)
                 navigate("/admin/events")
