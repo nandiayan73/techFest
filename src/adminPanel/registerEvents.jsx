@@ -79,7 +79,7 @@ const App=()=>
       }
       console.log(new_date);
       
-      axios.post('http://localhost:3000/api/user/eventRegister', {
+      axios.post('https://fest-backend-wr4i.onrender.com/api/user/eventRegister', {
         data: {
           // your data goes here
           title,
